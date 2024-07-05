@@ -68,4 +68,6 @@ target/
 # Miscellaneous
 HELP.md
 
-schoolmate-frontend
+schoolmate-frontend/src/components
+schoolmate-frontend/src/modals
+schoolmate-frontend/src/assets

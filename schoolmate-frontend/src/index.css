@@ -1,0 +1,173 @@
+/** Importing Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-opensans h-full;
+  background-color: #f6efee;
+}
+
+textarea {
+  resize: none;
+}
+
+button > span{
+  @apply flex items-center gap-2;
+}
+
+.btn-transition {
+  transition: 0.3s all ease-in;
+}
+
+.nav-link {
+  @apply relative max-md:w-fit font-bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  @apply text-yellow;
+}
+
+.nav-link.active {
+  @apply text-pink;
+  transition: color 0.3s ease-in;
+}
+
+.nav-link.active::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60%;
+  position: absolute;
+  bottom: 5;
+  left: 0;
+  @apply bg-pink;
+}
+
+#quote {
+  background: linear-gradient(
+    to top right,
+    rgb(237, 37, 78),
+    rgb(249, 220, 92)
+  );
+}
+
+.form-input {
+  @apply bg-dark rounded-xl flex-grow mb-4 font-mulish relative outline outline-2 outline-transparent focus-within:outline-yellow;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#dash-main::-webkit-scrollbar,
+#subjectDiv::-webkit-scrollbar,
+#noticebody::-webkit-scrollbar,
+#tableScroller::-webkit-scrollbar,
+#notices::-webkit-scrollbar {
+  @apply w-[5px] absolute right-0;
+}
+
+#dash-main::-webkit-scrollbar-track,
+#subjectDiv::-webkit-scrollbar-track,
+#noticebody::-webkit-scrollbar-track,
+#tableScroller::-webkit-scrollbar-track,
+#notices::-webkit-scrollbar-track {
+  @apply bg-slate-600;
+}
+
+#dash-main::-webkit-scrollbar-thumb,
+#subjectDiv::-webkit-scrollbar-thumb,
+#noticebody::-webkit-scrollbar-thumb,
+#tableScroller::-webkit-scrollbar-thumb,
+#notices::-webkit-scrollbar-thumb {
+  @apply bg-yellow;
+}
+
+thead {
+  @apply bg-primary text-white font-opensans;
+}
+
+thead th {
+  @apply text-white p-5;
+}
+
+tbody td {
+  @apply p-5 font-mulish text-dark;
+}
+
+tbody tr:nth-child(even) {
+  @apply bg-info;
+}
+
+#addUserModal .tremor-dialog-panel,
+#viewNoticeModal .tremor-dialog-panel,
+#addNoticeModal .tremor-dialog-panel {
+  @apply w-2/4;
+}
+
+#updateUserModal .tremor-dialog-panel {
+  @apply w-2/4;
+}
+
+#addStaffModal .tremor-dialog-panel,
+#addAlumniModal .tremor-dialog-panel,
+#updateAlumniModal .tremor-dialog-panel,
+#updateStaffModal .tremor-dialog-panel {
+  @apply w-2/4;
+}
+
+#viewAlumniModal .tremor-dialog-panel,
+#viewStudentModal .tremor-dialog-panel,
+#viewStaffModal .tremor-dialog-panel {
+  @apply max-w-4xl;
+}
+
+#addTimetableModal .tremor-dialog-panel,
+#viewTimetableModal .tremor-dialog-panel{
+  @apply max-w-7xl max-h-[calc(100vh-30px)];
+}
+
+#addBooksModal .tremor-dialog-panel{
+  @apply max-w-4xl max-h-[calc(100vh-64px)];
+}
+
+#addUniformModal .tremor-dialog-panel{
+  @apply max-w-3xl;
+}
+
+#timetableTable{
+  @apply text-center;
+}
+
+#timetableTable th,
+#timetableTable td{
+  @apply border border-black p-2;
+}
+
+#google_translate_element select {
+  @apply p-2 focus:outline-none; 
+}
+
+#google_translate_element > div{
+  @apply flex items-center gap-2;
+}
+
+#google_translate_element span a{
+  @apply flex items-center;
+}
